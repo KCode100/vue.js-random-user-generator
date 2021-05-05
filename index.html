@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: #f7f7f7;
+        }
+        img {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 20px;
+        }
+        .male {
+            background-color: lightblue;
+            border-color: lightblue;
+        }
+        .female {
+            background-color: pink;
+            border-color: pink;
+        }
+        button {
+            outline: none;
+            padding: 15px 30px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <img :class = "gender" :src="picture">
+        <h1>{{firstName}} {{lastName}}</h1>
+        <p>Email: {{email}}</p>
+        <button :class = "gender" @click = "getUser()">Get random user</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./scrip.js"></script>
+</body>
+</html>
